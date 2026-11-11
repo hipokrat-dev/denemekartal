@@ -1,0 +1,11 @@
+import express from 'express';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+const app = express();
+const root = path.dirname(fileURLToPath(import.meta.url));
+app.disable('x-powered-by');
+app.get('/health', (_req, res) => res.json({ status: 'ok' }));
+app.use(express.static(path.join(root, 'dist')));
+app.get('/', (_req, res) => res.sendFile(path.join(root, 'dist/index.html')));
+const server = app.listen(Number(process.env.PORT) || 3000, '0.0.0.0', () => console.log('Kartal server is ready'));
+process.on('SIGTERM', () => server.close());
