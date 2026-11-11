@@ -25,11 +25,11 @@ Sunucu Hostinger tarafından verilen `PORT` değişkenini kullanır. `/health` s
 
 - Referans videoyu kaydırmayla ilerleten üç bölümlü anlatım.
 - Tam ekran film penceresi, orijinal ses ve oynatıcı kontrolleri.
-- Three.js ile modellenen çöl, kartal, ofis koltuğu, masa ve bilgisayar.
-- Döndürme/yakınlaştırma, iki ışık modu, görünümü sıfırlama.
+- Three.js çöl sahnesi, taranmış altın kartal, ofis koltuğu, masa ve bilgisayar.
+- Döndürme/yakınlaştırma, kartala yakın çekim, iki ışık modu, görünümü sıfırlama.
 - Mobil düzen, klavye kontrolleri ve azaltılmış hareket tercihine uyum.
 
-Gerçekçi sinematik bölüm referans videodan gelir. Etkileşimli bölüm prosedürel bir 3D sahnedir; fotogerçekçi taranmış bir kartal modeli değildir.
+Sinematik bölüm referans videodan gelir. Etkileşimli kartal, Museum of Malopolska tarafından taranmış Golden Eagle modelidir: yaklaşık 181 bin üçgen, 4K renk/normal/yansıma dokuları, Meshopt ve WebP ile 6.5 MB GLB. Model sabit pozludur; uçuş animasyonu veya canlı hayvan hareketi içermez. Kaynak, CC BY 4.0 atıf bilgileri ve uygulanan dönüşümler: [public/models/ATTRIBUTION.md](public/models/ATTRIBUTION.md).
 
 Video ve karelerin açık repoda ve Hostinger sitesinde yayımlanması kullanıcı tarafından onaylanmıştır.
 

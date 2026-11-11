@@ -35,7 +35,7 @@ dialog.addEventListener('click', event => { if (event.target === dialog && event
 const observer = new IntersectionObserver(async entries => {
   if (!entries.some(entry => entry.isIntersecting)) return;
   observer.disconnect();
-  try { const { createWorld } = await import('./world.js'); createWorld(document.querySelector('#world'), reducedMotion); }
+  try { const { createWorld } = await import('./world.js'); await createWorld(document.querySelector('#world'), reducedMotion); }
   catch (error) { console.error(error); document.querySelector('#world-loading').textContent = '3D görünüm açılamadı. Filmi izleyerek sahneyi keşfedebilirsin.'; }
 }, { rootMargin: '500px' });
 observer.observe(document.querySelector('#kesif'));
