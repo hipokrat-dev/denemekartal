@@ -20,3 +20,15 @@ Sunucu Hostinger tarafından verilen `PORT` değişkenini kullanır. `/health` s
 ## Yerel
 
 `npm ci` ardından `npm run dev`. Üretim kontrolü: `npm run build && npm start`.
+
+## Deneyim
+
+- Referans videoyu kaydırmayla ilerleten üç bölümlü anlatım.
+- Tam ekran film penceresi, orijinal ses ve oynatıcı kontrolleri.
+- Three.js ile modellenen çöl, kartal, ofis koltuğu, masa ve bilgisayar.
+- Döndürme/yakınlaştırma, iki ışık modu, görünümü sıfırlama.
+- Mobil düzen, klavye kontrolleri ve azaltılmış hareket tercihine uyum.
+
+Gerçekçi sinematik bölüm referans videodan gelir. Etkileşimli bölüm prosedürel bir 3D sahnedir; fotogerçekçi taranmış bir kartal modeli değildir.
+
+`public/assets` içindeki video ve karelerin açık repoya gönderimi, dosya sahibinin açık paylaşım onayına bağlıdır.
