@@ -31,4 +31,6 @@ Sunucu Hostinger tarafından verilen `PORT` değişkenini kullanır. `/health` s
 
 Gerçekçi sinematik bölüm referans videodan gelir. Etkileşimli bölüm prosedürel bir 3D sahnedir; fotogerçekçi taranmış bir kartal modeli değildir.
 
-`public/assets` içindeki video ve karelerin açık repoya gönderimi, dosya sahibinin açık paylaşım onayına bağlıdır.
+Video ve karelerin açık repoda ve Hostinger sitesinde yayımlanması kullanıcı tarafından onaylanmıştır.
+
+Hostinger Express doğrudan `server.js` girişini çalıştırabildiğinden, üretim ön yüzü `dist/` içinde de sürümlenir. Kaynak değiştiğinde `npm run build` çalıştırıp güncel `dist/` dosyalarını da gönderin.
