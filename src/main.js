@@ -1,7 +1,9 @@
 import './style.css';
 import { createMotion } from './motion.js';
+import { attachScreen } from './screen.js';
 
 const film = document.querySelector('#journey-film');
+attachScreen(film);
 const stage = document.querySelector('#experience');
 const forward = document.querySelector('#forward');
 const backward = document.querySelector('#backward');

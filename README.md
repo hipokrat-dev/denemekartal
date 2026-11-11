@@ -14,6 +14,12 @@ Referans filmin ilk karesinden son karesine, klavyeyle kontrol edilen tam ekran 
 - 1080p/24 fps H.264, yüksek kaliteli kodlama ve 0.5 saniyelik anahtar kare aralığı geri sarma için kullanılır.
 - Önceki 3D sahnenin kaynakları ve model atıfları repoda korunmuştur; açılışta indirilmez.
 
+## Bilgisayar ekranı
+
+Kullanıcının HippocratesDaily görseli, ekrana perspektif dönüşümüyle yerleştirilir. Görsel dosyası değiştirilmeden korunur. 24 fps filmdeki LCD köşeleri `src/screen-track.json` içinde tutulur; kanat örtüşmeleri görünür alan maskeleriyle işlenir. `requestVideoFrameCallback` görüntüyü oynatma ve geri sarma sırasında gerçek video karesine eşler. Son yakın çekimde de aynı görsel görünür.
+
+Takibi yeniden çıkarmak için OpenCV ve NumPy bulunan bir Python ortamında `python scripts/track-screen.py` çalıştırılır. Tarayıcı bu paketlere ihtiyaç duymaz.
+
 ## Hostinger
 
 - Repo: `hipokrat-dev/denemekartal`, branch: `main`
