@@ -1,36 +1,30 @@
 # KARTAL
 
-Videodan esinlenen sinematik web deneyimi. Node.js + Express + Vite + Three.js.
-
-## Hostinger
-
-- Repository: `hipokrat-dev/denemekartal`
-- Branch: `main`
-- Framework: Express
-- Node.js: 22 veya üzeri
-- Root: `./`
-- Install: `npm ci`
-- Build: `npm run build`
-- Start: `npm start`
-- Entry: `server.js`
-- Build output: `dist`
-
-Sunucu Hostinger tarafından verilen `PORT` değişkenini kullanır. `/health` sağlık kontrolüdür.
-
-## Yerel
-
-`npm ci` ardından `npm run dev`. Üretim kontrolü: `npm run build && npm start`.
+Referans filmin ilk karesinden son karesine, klavyeyle kontrol edilen tam ekran sinematik yolculuk. Ana ekranda metin ve sayfa kaydırma yoktur.
 
 ## Deneyim
 
-- Referans videoyu kaydırmayla ilerleten üç bölümlü anlatım.
-- Tam ekran film penceresi, orijinal ses ve oynatıcı kontrolleri.
-- Three.js çöl sahnesi, taranmış altın kartal, ofis koltuğu, masa ve bilgisayar.
-- Döndürme/yakınlaştırma, kartala yakın çekim, iki ışık modu, görünümü sıfırlama.
-- Mobil düzen, klavye kontrolleri ve azaltılmış hareket tercihine uyum.
+- İleri ok, sağ ok veya W: kısa basışta 0.75 saniyelik adım; basılı tutunca kesintisiz ilerleme.
+- Geri ok, sol ok veya S: geri hareket.
+- Ekrandaki oklar fare ve dokunmatik ekranla aynı şekilde çalışır.
+- Uzun basış bırakıldığında, pencere odağı kaybolduğunda veya sekme gizlendiğinde hareket durur.
+- Başa dön, isteğe bağlı ses ve tam ekran için yalnızca simgeler bulunur.
+- İlk karede bekler; son karede durur, kendiliğinden tekrar başlamaz.
+- Görüntüler, kullanıcının yayımlama izni verdiği referans videonun tamamıdır. Bu sürüm gerçek zamanlı 3D uçuş değil, video tabanlı etkileşimli sinematik akıştır.
+- 1080p/24 fps H.264, yüksek kaliteli kodlama ve 0.5 saniyelik anahtar kare aralığı geri sarma için kullanılır.
+- Önceki 3D sahnenin kaynakları ve model atıfları repoda korunmuştur; açılışta indirilmez.
 
-Sinematik bölüm referans videodan gelir. Etkileşimli kartal, Museum of Malopolska tarafından taranmış Golden Eagle modelidir: yaklaşık 181 bin üçgen, 4K renk/normal/yansıma dokuları, Meshopt ve WebP ile 6.5 MB GLB. Model sabit pozludur; uçuş animasyonu veya canlı hayvan hareketi içermez. Kaynak, CC BY 4.0 atıf bilgileri ve uygulanan dönüşümler: [public/models/ATTRIBUTION.md](public/models/ATTRIBUTION.md).
+## Hostinger
 
-Video ve karelerin açık repoda ve Hostinger sitesinde yayımlanması kullanıcı tarafından onaylanmıştır.
+- Repo: `hipokrat-dev/denemekartal`, branch: `main`
+- Framework: Express, Node.js: 22+, root: `./`
+- Install: `npm ci`, build: `npm run build`, start: `npm start`
+- Entry: `server.js`, output: `dist`
+- Sunucu platformun `PORT` değişkenini kullanır. `/health` sağlık kontrolüdür.
 
-Hostinger Express doğrudan `server.js` girişini çalıştırabildiğinden, üretim ön yüzü `dist/` içinde de sürümlenir. Kaynak değiştiğinde `npm run build` çalıştırıp güncel `dist/` dosyalarını da gönderin.
+## Yerel doğrulama
+
+`npm ci`, `npm run dev`. Üretim: `npm run build && npm start`.
+`npm run check` sözdizimini; `npm test` hareket kontrolünün kısa/uzun basış, geri hareket ve sınır davranışını kontrol eder.
+
+Hostinger için `dist/` de sürümlenir. Kaynak değişikliklerinden sonra build alın ve güncel çıktıyı gönderin.
